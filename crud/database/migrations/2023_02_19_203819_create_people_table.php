@@ -9,16 +9,16 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up(): 
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 255);
-            $table->string('surname', 255);
-            $table->string('phonenum', 255)->Unique();
-            $table->string('street', 255);
-            $table->string('city', 255);
-            $table->string('country', 255);
+            $table->string('name');
+            $table->string('surname');
+            $table->string('phonenum');
+            $table->string('street');
+            $table->string('city');
+            $table->string('country');
             $table->timestamps();
         });
     }
@@ -26,7 +26,7 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down(): 
     {
         Schema::dropIfExists('people');
     }
